@@ -1,0 +1,91 @@
+// Reverse a linked List using recursion ,ALSO PASSING HEAD REFERENCE TO THE FUNCTION AS ARGUMENTS USING **SYMBOL IMPORTANT LOOK ...
+
+#include <iostream>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    // constructor
+    Node(int data)
+    {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+class LinkedList
+{
+public:
+    Node *head = NULL;
+
+    // Function to insert a new node at the beginning
+    void pushAtEnd(int new_data)
+    {
+        Node *iterator = this->head;
+        Node *temp = new Node(new_data);
+
+        // Will handle first time
+        if (iterator == NULL)
+        {
+            this->head = temp;
+            return;
+        }
+
+        // keep increasing the iterator
+        while (iterator->next)
+        {
+            iterator = iterator->next;
+        }
+
+        iterator->next = temp;
+    }
+
+    // printing linked list
+    void printList()
+    {
+        Node *iterator = this->head; // storing address of head
+        while (iterator)
+        {
+            cout << iterator->data << " ";
+            iterator = iterator->next;
+        }
+    }
+
+    void reverse(Node **&head, Node *curr, Node *prev)  // **head or **&head both is fine as they refer to address to pointer not head of linked list so making to copy to pointer to arugmente is fine and if not that is also fine as the value of pointer stores the address fo the head that is whay important part is...
+    {
+        if (curr == NULL)
+        {
+            *head = prev;
+            return;
+        }
+        Node *forward = curr->next;
+        reverse(head, forward, curr);
+        curr->next = prev;
+    }
+};
+
+int main()
+{
+
+    LinkedList lst;
+    lst.pushAtEnd(10);
+    lst.pushAtEnd(12);
+    lst.pushAtEnd(15);
+    lst.pushAtEnd(20);
+
+    lst.printList();
+
+    Node **head = &lst.head; 
+    Node *curr = lst.head;
+    lst.reverse(head, curr, NULL);
+
+    cout << endl;
+
+    lst.printList();
+
+    return 0;
+}

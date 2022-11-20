@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Data Table</title>
+    <style>
+        .table {
+            --bs-table-color: #fff;
+            --bs-table-bg: #212529;
+            --bs-table-border-color: #373b3e;
+            --bs-table-striped-bg: #2c3034;
+            --bs-table-striped-color: #fff;
+            --bs-table-active-bg: #373b3e;
+            --bs-table-active-color: #fff;
+            --bs-table-hover-bg: #323539;
+            --bs-table-hover-color: #fff;
+            color: var(--bs-table-color);
+            border-color: var(--bs-table-border-color);
+            width: 100%;
+            margin-bottom: 1rem;
+            vertical-align: top
+        }
+
+        .table>:not(caption)>*>* {
+            padding: .5rem .5rem;
+            background-color: var(--bs-table-bg);
+            border-bottom-width: 1px;
+            box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg)
+        }
+
+        .table>tbody {
+            vertical-align: inherit
+        }
+
+        .table>thead {
+            vertical-align: bottom
+        }
+
+        .table-sm>:not(caption)>*>* {
+            padding: .25rem .25rem
+        }
+
+        .table-bordered>:not(caption)>* {
+            border-width: 1px 0
+        }
+
+        .table-bordered>:not(caption)>*>* {
+            border-width: 0 1px
+        }
+
+        .table-borderless>:not(caption)>*>* {
+            border-bottom-width: 0
+        }
+
+        .table-borderless>:not(:first-child) {
+            border-top-width: 0
+        }
+
+        .table-striped>tbody>tr:nth-of-type(odd)>* {
+            --bs-table-accent-bg: var(--bs-table-striped-bg);
+            color: var(--bs-table-striped-color)
+        }
+
+        .table-striped-columns>:not(caption)>tr>:nth-child(2n) {
+            --bs-table-accent-bg: var(--bs-table-striped-bg);
+            color: var(--bs-table-striped-color)
+        }
+
+        .table-hover>tbody>tr:hover>* {
+            --bs-table-accent-bg: var(--bs-table-hover-bg);
+            color: var(--bs-table-hover-color)
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch
+        }
+
+        @media (max-width:575.98px) {
+            .table-responsive-sm {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch
+            }
+        }
+
+        @media (max-width:767.98px) {
+            .table-responsive-md {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch
+            }
+        }
+
+        @media (max-width:991.98px) {
+            .table-responsive-lg {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch
+            }
+        }
+
+        @media (max-width:1199.98px) {
+            .table-responsive-xl {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch
+            }
+        }
+
+        @media (max-width:1399.98px) {
+            .table-responsive-xxl {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>First</th>
+                    <th>Second</th>
+                    <th>Third</th>
+                    <th>Fouth</th>
+                    <th>Third</th>
+                    <th>Fouth</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>sumot</td>
+                    <td>sdfhkd</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                </tr>
+                <tr>
+                    <td>sumot</td>
+                    <td>sdfhkd</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                </tr>
+                <tr>
+                    <td>sumot</td>
+                    <td>sdfhkd</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                </tr>
+                <tr>
+                    <td>sumot</td>
+                    <td>sdfhkd</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                    <td>dsfd</td>
+                    <td>sdfjkld</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
