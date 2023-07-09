@@ -12,7 +12,7 @@ This repository contains implementations of various data structures and algorith
 
 ## Introduction
 
-In this repository, you will find a collection of data structures and algorithms implemented in various programming languages. Each implementation includes detailed explanations and code examples to help you understand the concepts better.
+In this repository, you will find a collection of data structures and algorithms implemented in various C++ language. Each implementation includes detailed explanations and code examples to help you understand the concepts better.
 
 ## Data Structures
 
